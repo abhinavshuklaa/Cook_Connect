@@ -19,7 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class QueryResponse_Activity extends AppCompatActivity {
+public class QueryResponse_Activity extends AppCompatActivity implements ApiViewHolder.onItemClickedListener {
     private  String getCuisineName;
     private List<MealsModel> list=new ArrayList<>();
     private ApiAdapter apiAdapter;
@@ -34,8 +34,9 @@ public class QueryResponse_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_query_response_);
-        initViews();
         getDataFromIntent();
+        initViews();
+
         setRecyclerAdapter();
 
 
@@ -44,7 +45,7 @@ public class QueryResponse_Activity extends AppCompatActivity {
     }
 
     private void setRecyclerAdapter() {
-        apiAdapter=new ApiAdapter(list);
+        apiAdapter=new ApiAdapter(list,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(apiAdapter);
@@ -66,7 +67,7 @@ public class QueryResponse_Activity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 if(response.code()== HttpURLConnection.HTTP_OK && response.body()!= null){
-            ResponseModel responseModel=response.body();
+                 ResponseModel responseModel=response.body();
                 list=responseModel.getMeals();
                 apiAdapter.updateAdapter(list);
 
@@ -96,4 +97,11 @@ public class QueryResponse_Activity extends AppCompatActivity {
 
         }
 
+    @Override
+    public void onItemClicked(int position) {
+        Toast.makeText(this, "Item Clicked at position"+ position, Toast.LENGTH_SHORT).show();
+        Intent intent=new Intent(this,VideoView_Activity.class);
+        intent.putExtra("link",list.get(position).getStrYoutube());
+        startActivity(intent);
+    }
 }

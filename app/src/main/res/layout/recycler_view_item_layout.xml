@@ -4,16 +4,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-
-
     <TextView
         android:id="@+id/tvTitleCuisineName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:background="#ff407a"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:gravity="center"/>
@@ -23,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_margin="4dp"
         android:layout_below="@+id/tvTitleCuisineName"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:elevation="8dp"
         app:cardCornerRadius="12dp">
 
@@ -32,6 +29,7 @@
         <ImageView
             android:id="@+id/imCuisineImage"
             android:layout_width="match_parent"
+            android:scaleType="centerCrop"
             android:layout_height="match_parent"/>
 
     </androidx.cardview.widget.CardView>
@@ -49,6 +47,7 @@
         android:id="@+id/tvFixed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="22sp"
         android:layout_below="@+id/tvTitleCuisineNameAgain"
         android:text="Ingredients Required"
         android:background="#ff407a"
@@ -113,22 +112,31 @@
     <TextView
         android:id="@+id/tvArea"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-
-
-    <TextView
-        android:id="@+id/tvInstructions"
-        android:layout_width="wrap_content"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
         android:layout_height="wrap_content"/>
 
 
     <TextView
         android:id="@+id/tvCategory"
         android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvInstructions"
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:padding="4dp"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>
 
+
 </RelativeLayout>
+
+
 

@@ -11,18 +11,20 @@ import java.util.List;
 
 public class ApiAdapter extends RecyclerView.Adapter<ApiViewHolder> {
     private List<MealsModel> list;
+    private ApiViewHolder.onItemClickedListener onItemClickedListener;
 
 
-    public ApiAdapter (List<MealsModel> mealsModelList){
+    public ApiAdapter (List<MealsModel> mealsModelList,ApiViewHolder.onItemClickedListener onItemClickedListener){
 
         list=mealsModelList;
+        this.onItemClickedListener=onItemClickedListener;
     }
     @NonNull
     @Override
     public ApiViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_item_layout,parent,false);
 
-        return new ApiViewHolder(view);
+        return new ApiViewHolder(view,onItemClickedListener);
     }
 
     @Override
@@ -40,3 +42,5 @@ public class ApiAdapter extends RecyclerView.Adapter<ApiViewHolder> {
         notifyDataSetChanged();
     }
 }
+
+

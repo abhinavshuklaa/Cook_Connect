@@ -16,7 +16,7 @@ import java.util.TimerTask;
 public class SplashScreen_Activity extends AppCompatActivity {
     private VideoView videoView;
     private ImageView imageView;
-    Timer timer;
+//    Timer timer;
 
 
     @Override
@@ -45,15 +45,15 @@ public class SplashScreen_Activity extends AppCompatActivity {
         });
         videoView.start();
 
-
-        timer=new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                Intent intent=new Intent(SplashScreen_Activity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        },30000);
+//
+//        timer=new Timer();
+//        timer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                Intent intent=new Intent(SplashScreen_Activity.this,MainActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        },30000);
     }
 }

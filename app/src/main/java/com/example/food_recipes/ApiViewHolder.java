@@ -9,16 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
-public class ApiViewHolder extends RecyclerView.ViewHolder {
+public class ApiViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
     private TextView tvTitleCuisineName;
     private TextView tvInstructions;
     private TextView tvArea;
     private TextView tvCategory;
     private ImageView imThumb;
+    private onItemClickedListener onItemClickedListener;
 
 
-    public ApiViewHolder(@NonNull View itemView) {
+    public ApiViewHolder(@NonNull View itemView, onItemClickedListener onItemsClickedListener) {
         super(itemView);
+        this.onItemClickedListener=onItemsClickedListener;
         initViews();
     }
 
@@ -42,4 +44,15 @@ public class ApiViewHolder extends RecyclerView.ViewHolder {
 
 
     }
+
+    @Override
+    public void onClick(View view) {
+        onItemClickedListener.onItemClicked(getAdapterPosition());
+
+    }
+
+    public interface onItemClickedListener{
+        void onItemClicked(int position);
+    }
+
 }

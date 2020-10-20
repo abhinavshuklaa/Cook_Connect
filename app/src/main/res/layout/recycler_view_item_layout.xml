@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <TextView
         android:id="@+id/tvTitleCuisineName"
         android:layout_width="match_parent"
@@ -47,13 +48,13 @@
         android:id="@+id/tvFixed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:layout_below="@+id/tvTitleCuisineNameAgain"
-        android:text="Ingredients Required"
+        android:text="Ingredients Required :-"
         android:background="#ff407a"
         android:textColor="@android:color/white"
         android:layout_margin="8dp"
-        android:textStyle="bold"/>
+        android:textStyle="italic"/>
 
 
     <LinearLayout
@@ -67,34 +68,17 @@
             android:layout_width="20dp"
             android:layout_height="0dp"
             android:layout_margin="2dp"
-            android:layout_weight="1"
             android:background="@drawable/cir"/>
 
         <View
             android:layout_width="20dp"
             android:layout_height="0dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:background="@drawable/cir"/>
-
-        <View
-            android:layout_width="20dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_margin="2dp"
-            android:background="@drawable/cir"/>
-
-        <View
-            android:layout_width="20dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_margin="2dp"
             android:background="@drawable/cir"/>
 
         <View
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_weight="1"
             android:layout_margin="2dp"
             android:background="@drawable/cir"/>
 

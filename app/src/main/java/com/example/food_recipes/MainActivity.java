@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private EditText etEnterCuisine;
     private RecyclerView recyclerView;
-    private Button btnHitApi;
+    private ImageView btnHitApi;
     private List<CuisineImages> cuisineImages;
 
 

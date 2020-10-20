@@ -36,8 +36,8 @@ public class ApiViewHolder extends RecyclerView.ViewHolder implements  View.OnCl
 
     public void setData(MealsModel mealsModel) {
         Picasso.get().load(mealsModel.getStrMealThumb()).into(imThumb);
-        tvArea.setText(mealsModel.getStrArea());
-        tvCategory.setText(mealsModel.getStrCategory());
+        tvArea.setText("Origin :"+mealsModel.getStrArea());
+        tvCategory.setText("Meal Type :"+mealsModel.getStrCategory());
         tvInstructions.setText(mealsModel.getStrInstructions());
         tvTitleCuisineName.setText(mealsModel.getStrMeal());
 

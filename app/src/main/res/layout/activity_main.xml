@@ -7,22 +7,37 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+
+
    <EditText
        android:id="@+id/etEnterCuisine"
-       android:layout_width="match_parent"
+       android:layout_width="0dp"
+       android:layout_weight="1.75"
        android:layout_height="wrap_content"
+       android:backgroundTint="@android:color/black"
        android:hint="Type Cuisine"
+       android:textColor="#ff407a"
        android:gravity="center"/>
 
 
 
-
-    <Button
+    <ImageView
         android:id="@+id/btnHitApi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#ff407a"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_weight="0.25"
+        android:src="@drawable/ic_cooking"/>
+
+
+    </LinearLayout>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvImagesCuisine"

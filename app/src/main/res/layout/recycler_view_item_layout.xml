@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <TextView
+        android:id="@+id/tvTitleCuisineName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="#ff407a"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imCard"
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        android:layout_below="@+id/tvTitleCuisineName"
+        android:layout_height="200dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="12dp">
+
+
+
+        <ImageView
+            android:id="@+id/imCuisineImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTitleCuisineNameAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_margin="4dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/imCard"/>
+
+    <TextView
+        android:id="@+id/tvFixed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitleCuisineNameAgain"
+        android:text="Ingredients Required"
+        android:background="#ff407a"
+        android:textColor="@android:color/white"
+        android:layout_margin="8dp"
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_below="@+id/tvFixed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llBullets"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/cir"/>
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/cir"/>
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/cir"/>
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/cir"/>
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@drawable/cir"/>
+
+    </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_below="@+id/tvFixed"
+    android:layout_toRightOf="@+id/llBullets">
+
+
+    <TextView
+        android:id="@+id/tvArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:id="@+id/tvInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+</RelativeLayout>
+

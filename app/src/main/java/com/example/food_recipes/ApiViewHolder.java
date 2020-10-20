@@ -32,7 +32,6 @@ public class ApiViewHolder extends RecyclerView.ViewHolder implements  View.OnCl
         imThumb=itemView.findViewById(R.id.imCuisineImage);
 
 
-
     }
 
     public void setData(MealsModel mealsModel) {

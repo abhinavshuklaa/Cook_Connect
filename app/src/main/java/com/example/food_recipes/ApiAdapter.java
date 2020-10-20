@@ -36,6 +36,7 @@ public class ApiAdapter extends RecyclerView.Adapter<ApiViewHolder> {
     @Override
     public int getItemCount() {
         return list.size();
+
     }
     public void updateAdapter(List<MealsModel> mealsModelList){
         this.list=mealsModelList;

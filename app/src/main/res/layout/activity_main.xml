@@ -24,5 +24,11 @@
         android:background="#ff407a"
         android:layout_gravity="center_horizontal"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvImagesCuisine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
 
 </LinearLayout>

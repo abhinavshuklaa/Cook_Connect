@@ -25,18 +25,12 @@ public class QueryResponse_Activity extends AppCompatActivity implements ApiView
     private ApiAdapter apiAdapter;
     private RecyclerView recyclerView;
 
-
-
-    
-    
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_query_response_);
         getDataFromIntent();
         initViews();
-
         setRecyclerAdapter();
 
 
@@ -71,10 +65,11 @@ public class QueryResponse_Activity extends AppCompatActivity implements ApiView
                 list=responseModel.getMeals();
                 apiAdapter.updateAdapter(list);
 
-
-
+                }else if(response.code()==HttpURLConnection.HTTP_NOT_FOUND){
+                    Toast.makeText(QueryResponse_Activity.this, "Not Found ", Toast.LENGTH_SHORT).show();
 
                 }
+
             }
 
             @Override
@@ -83,9 +78,6 @@ public class QueryResponse_Activity extends AppCompatActivity implements ApiView
 
             }
         });
-
-
-
 
     }
 

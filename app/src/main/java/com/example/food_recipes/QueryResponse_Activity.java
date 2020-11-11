@@ -33,9 +33,6 @@ public class QueryResponse_Activity extends AppCompatActivity implements ApiView
         initViews();
         setRecyclerAdapter();
 
-
-
-
     }
 
     private void setRecyclerAdapter() {

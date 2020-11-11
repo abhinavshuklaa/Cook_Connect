@@ -1,6 +1,7 @@
 package com.example.food_recipes;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setRecyclerAdapter() {
         CuisineImageAdapter cuisineImageAdapter=new CuisineImageAdapter(cuisineImages);
-        StaggeredGridLayoutManager gridLayoutManager=new StaggeredGridLayoutManager(4, LinearLayoutManager.HORIZONTAL);
+        GridLayoutManager gridLayoutManager=new GridLayoutManager(this,4,RecyclerView.VERTICAL,false);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(cuisineImageAdapter);
     }

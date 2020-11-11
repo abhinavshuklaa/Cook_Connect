@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VideoView_Activity"></activity>
+        <activity android:name=".YouTubePlay"></activity>
         <activity android:name=".QueryResponse_Activity" />
         <activity android:name=".SplashScreen_Activity">
             <intent-filter>

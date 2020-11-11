@@ -30,6 +30,7 @@ public class ApiViewHolder extends RecyclerView.ViewHolder implements  View.OnCl
         tvArea=itemView.findViewById(R.id.tvArea);
         tvCategory=itemView.findViewById(R.id.tvCategory);
         imThumb=itemView.findViewById(R.id.imCuisineImage);
+        imThumb.setOnClickListener(this);
 
 
     }

@@ -89,7 +89,7 @@ public class QueryResponse_Activity extends AppCompatActivity implements ApiView
     @Override
     public void onItemClicked(int position) {
         Toast.makeText(this, "Item Clicked at position"+ position, Toast.LENGTH_SHORT).show();
-        Intent intent=new Intent(this,VideoView_Activity.class);
+        Intent intent=new Intent(this,YouTubePlay.class);
         intent.putExtra("link",list.get(position).getStrYoutube());
         startActivity(intent);
     }

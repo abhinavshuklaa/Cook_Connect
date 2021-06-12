@@ -62,10 +62,13 @@ public class QueryResponse_Activity extends AppCompatActivity implements ApiView
                         ResponseModel responseModel=response.body();
                         list=responseModel.getMeals();
                         apiAdapter.updateAdapter(list);
+                    }else{
+                        Toast.makeText(QueryResponse_Activity.this, "Not Found ", Toast.LENGTH_SHORT).show();
+
                     }
 
 
-                }else if(response.code()==HttpURLConnection.HTTP_NOT_FOUND){
+                }else{
                     Toast.makeText(QueryResponse_Activity.this, "Not Found ", Toast.LENGTH_SHORT).show();
 
                 }

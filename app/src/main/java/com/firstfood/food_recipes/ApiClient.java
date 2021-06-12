@@ -1,6 +1,6 @@
-package com.example.food_recipes;
+package com.firstfood.food_recipes;
 
-import com.example.food_recipes.Model.ResponseModel;
+import com.firstfood.food_recipes.Model.ResponseModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

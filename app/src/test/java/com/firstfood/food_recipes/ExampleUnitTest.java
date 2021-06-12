@@ -1,4 +1,4 @@
-package com.example.food_recipes;
+package com.firstfood.food_recipes;
 
 import org.junit.Test;
 

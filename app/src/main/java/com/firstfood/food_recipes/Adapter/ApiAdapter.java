@@ -1,4 +1,4 @@
-package com.example.food_recipes.Adapter;
+package com.firstfood.food_recipes.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.food_recipes.ApiViewHolder;
-import com.example.food_recipes.Model.MealsModel;
-import com.example.food_recipes.R;
+import com.firstfood.food_recipes.ApiViewHolder;
+import com.firstfood.food_recipes.Model.MealsModel;
+import com.firstfood.food_recipes.R;
 
 import java.util.List;
 

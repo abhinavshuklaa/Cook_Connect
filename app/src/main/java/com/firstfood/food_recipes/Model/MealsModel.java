@@ -1,4 +1,4 @@
-package com.example.food_recipes.Model;
+package com.firstfood.food_recipes.Model;
 
 import com.google.gson.annotations.SerializedName;
 

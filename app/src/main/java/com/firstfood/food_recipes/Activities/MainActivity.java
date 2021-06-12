@@ -1,4 +1,4 @@
-package com.example.food_recipes.Activities;
+package com.firstfood.food_recipes.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.food_recipes.Adapter.CuisineImageAdapter;
-import com.example.food_recipes.CuisineImages;
-import com.example.food_recipes.R;
+import com.firstfood.food_recipes.Adapter.CuisineImageAdapter;
+import com.firstfood.food_recipes.CuisineImages;
+import com.firstfood.food_recipes.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -20,8 +20,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class QueryResponse_Activity extends AppCompatActivity implements ApiViewHolder.onItemClickedListener {
-    private  String getCuisineName;
-    private List<MealsModel> list=new ArrayList<>();
+    private String getCuisineName;
+    private List<MealsModel> list = new ArrayList<>();
     private ApiAdapter apiAdapter;
     private RecyclerView recyclerView;
 
@@ -36,39 +36,37 @@ public class QueryResponse_Activity extends AppCompatActivity implements ApiView
     }
 
     private void setRecyclerAdapter() {
-        apiAdapter=new ApiAdapter(list,this);
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
+        apiAdapter = new ApiAdapter(list, this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(apiAdapter);
-
-
 
 
     }
 
 
     private void initViews() {
-        recyclerView=findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
 
 
-
-        ApiClient apiClient=Network.getRetrofitInstance(QueryResponse_Activity.this).create(ApiClient.class);
-        Call<ResponseModel> call=apiClient.enterCuisine(getCuisineName);
+        ApiClient apiClient = Network.getRetrofitInstance(QueryResponse_Activity.this).create(ApiClient.class);
+        Call<ResponseModel> call = apiClient.enterCuisine(getCuisineName);
         call.enqueue(new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
-                if(response.code()== HttpURLConnection.HTTP_OK && response.body()!= null){
-                    if(response.body().getMeals()!=null){
-                        ResponseModel responseModel=response.body();
-                        list=responseModel.getMeals();
+                if (response.code() == HttpURLConnection.HTTP_OK && response.body() != null) {
+                    if (response.body().getMeals() != null) {
+                        ResponseModel responseModel = response.body();
+                        list = responseModel.getMeals();
                         apiAdapter.updateAdapter(list);
-                    }else{
-                        Toast.makeText(QueryResponse_Activity.this, "Not Found ", Toast.LENGTH_SHORT).show();
-
+                    } else {
+                        Toast.makeText(QueryResponse_Activity.this, "Item Not Found \nGoing back to search...", Toast.LENGTH_SHORT).show();
+                        Intent goBackToSearch = new Intent(QueryResponse_Activity.this, MainActivity.class);
+                        startActivity(goBackToSearch);
                     }
 
 
-                }else{
+                } else {
                     Toast.makeText(QueryResponse_Activity.this, "Not Found ", Toast.LENGTH_SHORT).show();
 
                 }
@@ -86,17 +84,17 @@ public class QueryResponse_Activity extends AppCompatActivity implements ApiView
 
     private void getDataFromIntent() {
         if (getIntent() != null && getIntent().getExtras() != null) {
-            getCuisineName=getIntent().getStringExtra("cuisineQuery");
+            getCuisineName = getIntent().getStringExtra("cuisineQuery");
 
         }
 
-        }
+    }
 
     @Override
     public void onItemClicked(int position) {
-        Toast.makeText(this, "Item Clicked at position"+ position, Toast.LENGTH_SHORT).show();
-        Intent intent=new Intent(this,YouTubePlay.class);
-        intent.putExtra("link",list.get(position).getStrYoutube());
+        Toast.makeText(this, "Item Clicked at position" + position, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, YouTubePlay.class);
+        intent.putExtra("link", list.get(position).getStrYoutube());
         startActivity(intent);
     }
 }

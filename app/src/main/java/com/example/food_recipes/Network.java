@@ -24,7 +24,7 @@ public class Network {
     private static final String BASE_URL = " https://www.themealdb.com/";
     private static final String TAG = Network.class.getSimpleName();
 
-    private static HttpLoggingInterceptor httpLoggingInterceptor=new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
+    private static HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
 
 
     public static retrofit2.Retrofit getRetrofitInstance(final Context context) {

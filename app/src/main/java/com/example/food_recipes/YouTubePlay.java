@@ -20,8 +20,8 @@ public class YouTubePlay extends YouTubeBaseActivity {
     private String v;
 
 
-     YouTubePlayerView mYouTubePlayerView;
-     Button btnPlay;
+    YouTubePlayerView mYouTubePlayerView;
+    Button btnPlay;
     YouTubePlayer.OnInitializedListener onInitializedListener;
 
 
@@ -32,9 +32,9 @@ public class YouTubePlay extends YouTubeBaseActivity {
         Log.d(TAG, "onCreate");
         getDataFromIntent();
 
-        btnPlay =(Button)findViewById(R.id.btnPlay);
+        btnPlay = (Button) findViewById(R.id.btnPlay);
 
-        mYouTubePlayerView = (YouTubePlayerView)findViewById(R.id.view2);
+        mYouTubePlayerView = (YouTubePlayerView) findViewById(R.id.view2);
 
         onInitializedListener = new YouTubePlayer.OnInitializedListener() {
             @Override

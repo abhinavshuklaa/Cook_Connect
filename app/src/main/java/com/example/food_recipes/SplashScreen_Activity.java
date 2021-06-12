@@ -23,7 +23,7 @@ public class SplashScreen_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen_);
-        handler=new Handler(getMainLooper());
+        handler = new Handler(getMainLooper());
     }
 
     @Override
@@ -32,12 +32,12 @@ public class SplashScreen_Activity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(SplashScreen_Activity.this,MainActivity.class);
+                Intent intent = new Intent(SplashScreen_Activity.this, MainActivity.class);
                 startActivity(intent);
 
             }
-        },3000);
+        }, 2000);
 
-        Log.d("abhinav","handler called for 4 seconds");
+        Log.d("abhinav", "handler called for 4 seconds");
     }
 }

@@ -1,6 +1,8 @@
 package com.example.food_recipes;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,8 +16,8 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class YouTubePlay extends YouTubeBaseActivity {
     private static final String TAG = "MainActivity";
-//    private String url;
-//    private String v;
+    private String url;
+    private String v;
 
 
      YouTubePlayerView mYouTubePlayerView;
@@ -26,9 +28,9 @@ public class YouTubePlay extends YouTubeBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_you_tube_play);
         Log.d(TAG, "onCreate");
-//        getDataFromIntent();
+        getDataFromIntent();
 
         btnPlay =(Button)findViewById(R.id.btnPlay);
 
@@ -39,7 +41,7 @@ public class YouTubePlay extends YouTubeBaseActivity {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d(TAG, "onClick : Initializing done");
 
-                youTubePlayer.loadVideo("OcarztU8cYo");
+                youTubePlayer.loadVideo(v);
 
 
             }
@@ -65,10 +67,10 @@ public class YouTubePlay extends YouTubeBaseActivity {
     }
 
 
-//    private void getDataFromIntent() {
-//        Intent intent = getIntent();
-//        url = intent.getStringExtra("link");
-//        Uri uri = Uri.parse(url);
-//        v = uri.getQueryParameter("v");
-//    }
+    private void getDataFromIntent() {
+        Intent intent = getIntent();
+        url = intent.getStringExtra("link");
+        Uri uri = Uri.parse(url);
+        v = uri.getQueryParameter("v");
+    }
 }

@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private List<CuisineImages> cuisineImages;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         initViews();
         buildRecycleData();
         setRecyclerAdapter();
-
-
 
     }
 
@@ -71,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
 
 }

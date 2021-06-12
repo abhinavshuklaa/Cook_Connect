@@ -58,9 +58,12 @@ public class QueryResponse_Activity extends AppCompatActivity implements ApiView
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 if(response.code()== HttpURLConnection.HTTP_OK && response.body()!= null){
-                 ResponseModel responseModel=response.body();
-                list=responseModel.getMeals();
-                apiAdapter.updateAdapter(list);
+                    if(response.body().getMeals()!=null){
+                        ResponseModel responseModel=response.body();
+                        list=responseModel.getMeals();
+                        apiAdapter.updateAdapter(list);
+                    }
+
 
                 }else if(response.code()==HttpURLConnection.HTTP_NOT_FOUND){
                     Toast.makeText(QueryResponse_Activity.this, "Not Found ", Toast.LENGTH_SHORT).show();

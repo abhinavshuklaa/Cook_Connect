@@ -1,17 +1,18 @@
-package com.example.food_recipes;
+package com.example.food_recipes.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import com.example.food_recipes.Adapter.CuisineImageAdapter;
+import com.example.food_recipes.CuisineImages;
+import com.example.food_recipes.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setRecyclerAdapter() {
         CuisineImageAdapter cuisineImageAdapter = new CuisineImageAdapter(cuisineImages);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4, RecyclerView.VERTICAL, false);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4, RecyclerView.HORIZONTAL, false);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(cuisineImageAdapter);
     }

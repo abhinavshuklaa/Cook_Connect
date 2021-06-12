@@ -1,19 +1,13 @@
-package com.example.food_recipes;
+package com.example.food_recipes.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.VideoView;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import com.example.food_recipes.R;
 
 public class SplashScreen_Activity extends AppCompatActivity {
     private Handler handler;

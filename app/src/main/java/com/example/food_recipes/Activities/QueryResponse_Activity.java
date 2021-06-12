@@ -1,4 +1,4 @@
-package com.example.food_recipes;
+package com.example.food_recipes.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,10 +6,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.food_recipes.Adapter.ApiAdapter;
+import com.example.food_recipes.ApiClient;
+import com.example.food_recipes.ApiViewHolder;
+import com.example.food_recipes.Model.MealsModel;
+import com.example.food_recipes.Model.ResponseModel;
+import com.example.food_recipes.Network;
+import com.example.food_recipes.R;
+import com.example.food_recipes.YouTubePlay;
 
 import java.net.HttpURLConnection;
 import java.util.ArrayList;

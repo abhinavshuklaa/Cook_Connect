@@ -1,7 +1,8 @@
-package com.example.food_recipes;
+package com.example.food_recipes.Model;
 
 import java.util.List;
 
+import com.example.food_recipes.Model.MealsModel;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;

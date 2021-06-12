@@ -1,6 +1,6 @@
 package com.example.food_recipes;
 
-import java.util.List;
+import com.example.food_recipes.Model.ResponseModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

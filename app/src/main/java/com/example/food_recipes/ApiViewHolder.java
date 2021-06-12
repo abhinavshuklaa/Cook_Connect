@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.food_recipes.Model.MealsModel;
 import com.squareup.picasso.Picasso;
 
 public class ApiViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

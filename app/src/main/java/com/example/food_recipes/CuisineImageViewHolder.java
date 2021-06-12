@@ -12,10 +12,11 @@ public class CuisineImageViewHolder extends RecyclerView.ViewHolder {
 
     public CuisineImageViewHolder(@NonNull View itemView) {
         super(itemView);
-        imageView=itemView.findViewById(R.id.imCuisine);
+        imageView = itemView.findViewById(R.id.imCuisine);
 
     }
-    public void setData(CuisineImages cuisineImages){
+
+    public void setData(CuisineImages cuisineImages) {
         imageView.setImageResource(cuisineImages.getPicID());
     }
 }

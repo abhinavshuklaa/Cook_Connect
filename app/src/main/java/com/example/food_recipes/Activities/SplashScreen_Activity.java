@@ -1,19 +1,13 @@
-package com.example.food_recipes;
+package com.example.food_recipes.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.VideoView;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import com.example.food_recipes.R;
 
 public class SplashScreen_Activity extends AppCompatActivity {
     private Handler handler;
@@ -23,7 +17,7 @@ public class SplashScreen_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen_);
-        handler=new Handler(getMainLooper());
+        handler = new Handler(getMainLooper());
     }
 
     @Override
@@ -32,12 +26,12 @@ public class SplashScreen_Activity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(SplashScreen_Activity.this,MainActivity.class);
+                Intent intent = new Intent(SplashScreen_Activity.this, MainActivity.class);
                 startActivity(intent);
 
             }
-        },3000);
+        }, 2000);
 
-        Log.d("abhinav","handler called for 4 seconds");
+        Log.d("abhinav", "handler called for 4 seconds");
     }
 }

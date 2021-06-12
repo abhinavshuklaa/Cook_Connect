@@ -7,9 +7,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.food_recipes.Model.MealsModel;
 import com.squareup.picasso.Picasso;
 
-public class ApiViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
+public class ApiViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     private TextView tvTitleCuisineName;
     private TextView tvInstructions;
     private TextView tvArea;
@@ -20,25 +21,26 @@ public class ApiViewHolder extends RecyclerView.ViewHolder implements  View.OnCl
 
     public ApiViewHolder(@NonNull View itemView, onItemClickedListener onItemsClickedListener) {
         super(itemView);
-        this.onItemClickedListener=onItemsClickedListener;
+        this.onItemClickedListener = onItemsClickedListener;
         initViews();
     }
 
     private void initViews() {
-        tvTitleCuisineName=itemView.findViewById(R.id.tvTitleCuisineName);
-        tvInstructions=itemView.findViewById(R.id.tvInstructions);
-        tvArea=itemView.findViewById(R.id.tvArea);
-        tvCategory=itemView.findViewById(R.id.tvCategory);
-        imThumb=itemView.findViewById(R.id.imCuisineImage);
+        tvTitleCuisineName = itemView.findViewById(R.id.tvTitleCuisineName);
+        tvInstructions = itemView.findViewById(R.id.tvInstructions);
+        tvArea = itemView.findViewById(R.id.tvArea);
+        tvCategory = itemView.findViewById(R.id.tvCategory);
+        imThumb = itemView.findViewById(R.id.imCuisineImage);
+        imThumb.setOnClickListener(this);
 
 
     }
 
     public void setData(MealsModel mealsModel) {
         Picasso.get().load(mealsModel.getStrMealThumb()).into(imThumb);
-        tvArea.setText("Origin :"+mealsModel.getStrArea());
-        tvCategory.setText("Meal Type :"+mealsModel.getStrCategory());
-        tvInstructions.setText("Recipes :--"+mealsModel.getStrInstructions());
+        tvArea.setText("Origin :" + mealsModel.getStrArea());
+        tvCategory.setText("Meal Type :" + mealsModel.getStrCategory());
+        tvInstructions.setText("Recipes :--" + mealsModel.getStrInstructions());
         tvTitleCuisineName.setText(mealsModel.getStrMeal());
 
 
@@ -50,7 +52,7 @@ public class ApiViewHolder extends RecyclerView.ViewHolder implements  View.OnCl
 
     }
 
-    public interface onItemClickedListener{
+    public interface onItemClickedListener {
         void onItemClicked(int position);
     }
 

@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private List<CuisineImages> cuisineImages;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,22 +34,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setRecyclerAdapter() {
-        CuisineImageAdapter cuisineImageAdapter=new CuisineImageAdapter(cuisineImages);
-        GridLayoutManager gridLayoutManager=new GridLayoutManager(this,4,RecyclerView.VERTICAL,false);
+        CuisineImageAdapter cuisineImageAdapter = new CuisineImageAdapter(cuisineImages);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4, RecyclerView.VERTICAL, false);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(cuisineImageAdapter);
     }
 
     private void buildRecycleData() {
-        cuisineImages=new ArrayList<>();
-        for(int i=0;i<100;i++){
-            if(i%4==0){
+        cuisineImages = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            if (i % 4 == 0) {
                 cuisineImages.add(new CuisineImages(R.drawable.food));
-            }else if(i%4==1){
+            } else if (i % 4 == 1) {
                 cuisineImages.add(new CuisineImages(R.drawable.food_1));
-            }else if(i%4==2){
+            } else if (i % 4 == 2) {
                 cuisineImages.add(new CuisineImages(R.drawable.food_3));
-            }else{
+            } else {
                 cuisineImages.add(new CuisineImages(R.drawable.food_4));
             }
         }
@@ -59,19 +58,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
         etEnterCuisine = findViewById(R.id.etEnterCuisine);
-        recyclerView=findViewById(R.id.rvImagesCuisine);
+        recyclerView = findViewById(R.id.rvImagesCuisine);
         btnHitApi = findViewById(R.id.btnHitApi);
         btnHitApi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,QueryResponse_Activity.class);
-                intent.putExtra("cuisineQuery",etEnterCuisine.getText().toString());
+                Intent intent = new Intent(MainActivity.this, QueryResponse_Activity.class);
+                intent.putExtra("cuisineQuery", etEnterCuisine.getText().toString());
                 startActivity(intent);
             }
         });
     }
-
-
 
 
 }

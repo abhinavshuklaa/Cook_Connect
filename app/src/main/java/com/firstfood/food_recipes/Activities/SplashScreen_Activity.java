@@ -1,4 +1,4 @@
-package com.example.food_recipes.Activities;
+package com.firstfood.food_recipes.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 
-import com.example.food_recipes.R;
+import com.firstfood.food_recipes.R;
 
 public class SplashScreen_Activity extends AppCompatActivity {
     private Handler handler;

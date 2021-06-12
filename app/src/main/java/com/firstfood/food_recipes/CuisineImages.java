@@ -1,4 +1,4 @@
-package com.example.food_recipes;
+package com.firstfood.food_recipes;
 
 public class CuisineImages {
     private int picID;

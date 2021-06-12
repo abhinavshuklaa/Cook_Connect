@@ -1,4 +1,4 @@
-package com.example.food_recipes;
+package com.firstfood.food_recipes;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.food_recipes.Model.MealsModel;
+import com.firstfood.food_recipes.Model.MealsModel;
 import com.squareup.picasso.Picasso;
 
 public class ApiViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

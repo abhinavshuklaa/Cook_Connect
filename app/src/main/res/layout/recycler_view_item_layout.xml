@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
 
     <TextView
@@ -11,27 +11,26 @@
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:background="#ff407a"
-        android:textSize="24sp"
+        android:gravity="center"
         android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/imCard"
         android:layout_width="match_parent"
-        android:layout_margin="4dp"
-        android:layout_below="@+id/tvTitleCuisineName"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitleCuisineName"
+        android:layout_margin="4dp"
         android:elevation="8dp"
         app:cardCornerRadius="12dp">
-
 
 
         <ImageView
             android:id="@+id/imCuisineImage"
             android:layout_width="match_parent"
-            android:scaleType="centerCrop"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
 
     </androidx.cardview.widget.CardView>
 
@@ -39,85 +38,85 @@
         android:id="@+id/tvTitleCuisineNameAgain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
+        android:layout_below="@+id/imCard"
         android:layout_margin="4dp"
-        android:textSize="18sp"
-        android:layout_below="@+id/imCard"/>
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tvFixed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
         android:layout_below="@+id/tvTitleCuisineNameAgain"
-        android:text="Ingredients Required :-"
-        android:background="#ff407a"
-        android:textColor="@android:color/white"
         android:layout_margin="8dp"
-        android:textStyle="italic"/>
+        android:background="#ff407a"
+        android:text="Ingredients Required :-"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="italic" />
 
 
     <LinearLayout
-        android:layout_below="@+id/tvFixed"
+        android:id="@+id/llBullets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/llBullets"
+        android:layout_below="@+id/tvFixed"
         android:orientation="vertical">
 
         <View
             android:layout_width="20dp"
             android:layout_height="0dp"
             android:layout_margin="2dp"
-            android:background="@drawable/cir"/>
+            android:background="@drawable/cir" />
 
         <View
             android:layout_width="20dp"
             android:layout_height="0dp"
             android:layout_margin="2dp"
-            android:background="@drawable/cir"/>
+            android:background="@drawable/cir" />
 
         <View
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_margin="2dp"
-            android:background="@drawable/cir"/>
+            android:background="@drawable/cir" />
 
     </LinearLayout>
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_below="@+id/tvFixed"
-    android:layout_toRightOf="@+id/llBullets">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFixed"
+        android:layout_toRightOf="@+id/llBullets"
+        android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/tvArea"
-        android:layout_width="wrap_content"
-        android:padding="4dp"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
 
-    <TextView
-        android:id="@+id/tvCategory"
-        android:layout_width="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="4dp"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tvInstructions"
-        android:layout_width="wrap_content"
-        android:textSize="16sp"
-        android:padding="4dp"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textSize="16sp" />
 
-</LinearLayout>
+    </LinearLayout>
 
 
 </RelativeLayout>

@@ -7,27 +7,26 @@
     tools:context=".YouTubePlay">
 
 
-
     <Button
         android:id="@+id/btnPlay"
         android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/view2"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@android:color/white"
         android:drawableRight="@drawable/ic_you"
         android:drawablePadding="5dp"
-        android:textColor="#CC0000"
         android:padding="8dp"
-        android:layout_margin="5dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:text="Play Recipe Video" />
+        android:text="Play Recipe Video"
+        android:textColor="#CC0000" />
 
     <view
         android:id="@+id/view2"
         class="com.google.android.youtube.player.YouTubePlayerView"
         android:layout_width="match_parent"
-        android:layout_centerVertical="true"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
 
 
 </RelativeLayout>

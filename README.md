@@ -14,6 +14,7 @@ photos and videos.
 
 ### Install
 Download it from the play store and start using it. Doesn't require any login/signup.
+Link in the description.
 
 ## Show your support
 
